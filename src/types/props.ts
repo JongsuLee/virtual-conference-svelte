@@ -16,4 +16,8 @@ interface ButtonProps extends ComponentProps {
   };
 }
 
-export type { ButtonProps };
+interface ButtonsProps extends ComponentProps {
+  buttons: ButtonProps[];
+}
+
+export type { ButtonProps, ButtonsProps };

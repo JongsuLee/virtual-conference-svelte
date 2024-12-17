@@ -1,4 +1,5 @@
 <script lang="ts">
+  import '/src/style/index.css'
   import type { ButtonProps } from "../../types/props";
   const {classList, id, options}: ButtonProps = $props()
     
