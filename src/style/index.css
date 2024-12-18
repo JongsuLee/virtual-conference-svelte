@@ -10,3 +10,21 @@
   justify-content: space-around;
   align-items: center;
 }
+
+.modal-outer-frame {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.modal-inner-frame {
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}

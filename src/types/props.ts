@@ -10,7 +10,7 @@ interface ButtonProps extends ComponentProps {
   options: {
     content?: string;
     childNode?: Snippet;
-    clickHandler: () => any;
+    clickHandler: (e: MouseEvent) => any;
     mouseoverHandler?: () => any;
     mouseoutHandler?: () => any;
   };
@@ -20,4 +20,13 @@ interface ButtonsProps extends ComponentProps {
   buttons: ButtonProps[];
 }
 
-export type { ButtonProps, ButtonsProps };
+interface ModalProps extends ComponentProps {
+  options: {
+    childNode: Snippet<[{ [key: string]: any }]>;
+    childNodeOptions: { [key: string]: any };
+    modalOffHandler?: () => any;
+    backgroundColor?: string;
+  };
+}
+
+export type { ButtonProps, ButtonsProps, ModalProps };
