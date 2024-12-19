@@ -28,3 +28,179 @@
   transform: translate(-50%, -50%);
   z-index: 2;
 }
+
+.stream-frame {
+  position: relative;
+}
+
+.profile-frame.on {
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: block;
+}
+
+.profile-frame.off {
+  display: none;
+}
+
+.profile-image {
+  border: 1px solid black;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stream-video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: block;
+}
+
+.stream-video.off {
+  display: none;
+}
+
+.device-set-toggle-buttons {
+  width: calc(100% - 10px);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.device-set-toggle-button {
+  width: fit-content;
+  height: fit-content;
+  padding: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  border: 1px solid black;
+  position: relative;
+}
+
+.toggle-button-image {
+  width: 24px;
+  height: 24px;
+}
+
+.description-frame {
+  display: none;
+}
+
+.device-set-toggle-button.on .description-frame {
+  width: max-content;
+  height: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, calc(-100% - 10px));
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: block;
+}
+
+.description-dummy {
+  position: absolute;
+  left: 50%;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+
+.description-dummy.down {
+  border-top: 10px solid rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  transform: translate(-50%, 100%);
+}
+
+.description-dummy.up {
+  border-bottom: 10px solid rgba(0, 0, 0, 0.5);
+  top: 0;
+  transform: translate(-50%, -100%);
+}
+
+.conference-stream-status-frame {
+  width: fit-content;
+  height: fit-content;
+  padding: 5px 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  z-index: 3;
+}
+
+.device-status-frame {
+  width: fit-content;
+  height: fit-content;
+  padding: 0 2.5px;
+}
+
+.device-status-image {
+  width: 24px;
+  height: 24px;
+}
+
+.audio-status-frame.off .device-status-image {
+  display: block;
+}
+
+.audio-status-frame.on .device-status-image {
+  display: none;
+}
+
+.equalizer-frame {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.audio-status-frame.off .equalizer-frame {
+  display: none;
+}
+
+.audio-status-frame.on .equalizer-frame {
+  display: flex;
+}
+
+.equalizer {
+  width: 4px;
+  height: 4px;
+  margin: 1px;
+  background-color: white;
+}
+
+.equalizer.hidden {
+  display: none;
+}
+
+.conference-stream-user-name {
+  width: fit-content;
+  max-width: 6rem;
+  color: white;
+  font-weight: bold;
+  padding: 0 2.5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

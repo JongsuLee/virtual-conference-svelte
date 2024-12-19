@@ -15,6 +15,6 @@
     {options.content}
   {/if}
   {#if options.childNode}
-    {@render options.childNode()}
+    {@render options.childNode(options.childNodeOptions ? options.childNodeOptions : {})}
   {/if}
 </div>
